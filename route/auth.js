@@ -45,13 +45,8 @@ module.exports = (app) => {
         }
     });
 
-<<<<<<< HEAD
     app.post('/auth/login', [
         body('emailId', 'Enter a valid email').isEmail(),
-=======
-    app.post('/login', [
-        body('email', 'Enter a valid email').isEmail(),
->>>>>>> f4ab7704e2831309e5e7fd7482db5d073f39ba92
         body('password', 'Password cannot be blank').exists(),
       ], async (req, res) => {
         let success = false;
