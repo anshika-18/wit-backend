@@ -18,4 +18,13 @@ module.exports = (app) => {
       return res.status(500).json(err);
     }
   });
+
+  app.get("/testimonials/getFeedback", async (req, res) => {
+    try {
+      const data = await Testimonials.find();
+      return res.status(200).json(data);
+    } catch (err) {
+      return res.status(500).json(err);
+    }
+  })
 };
