@@ -31,6 +31,7 @@ require("./route/team")(app);
 require("./route/testimonials")(app);
 require("./route/event")(app);
 require("./route/query")(app)
+require("./route/auth")(app)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, (err) => {
