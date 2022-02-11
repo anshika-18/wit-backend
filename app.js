@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
 });
 
 require("./route/team")(app);
+require("./route/testimonials")(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, (err) => {
