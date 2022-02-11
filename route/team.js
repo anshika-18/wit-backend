@@ -19,4 +19,13 @@ module.exports = (app) => {
       return res.status(500).json(err);
     }
   });
+
+  app.get("/team/getMembers", async (req, res) => {
+    try {
+      const data = await Team.find();
+      return res.status(200).json(data);
+    } catch (err) {
+      return res.status(500).json(err);
+    }
+  });
 };
