@@ -2,7 +2,7 @@ const User = require("../model/user.js");
 const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-
+ 
 module.exports = (app) => {
   app.post(
     "/auth/register",
