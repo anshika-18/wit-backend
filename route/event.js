@@ -31,6 +31,17 @@ module.exports = (app) => {
         }
     })
 
+    app.get("/event/getEvent/:title" , async (req,res)=>{
+
+        try{
+            //console.log(req)
+            const data = await Event.find({topic:req.params.title});
+            return res.status(200).json(data);
+        }catch (err) {
+            return res.status(500).json(err);
+        }
+    })
+
 }
 
 
