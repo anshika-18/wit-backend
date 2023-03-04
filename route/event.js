@@ -3,7 +3,8 @@ const Event = require("../model/event.js");
 module.exports = (app) => {
   app.post("/event/addEvent", async (req, res) => {
     try {
-      const { topic, posterUrl, speaker, description, date } = req.body;
+      const { topic, posterUrl, speaker, description, date, registerUrl } =
+        req.body;
 
       const newEvent = new Event({
         topic,
@@ -11,6 +12,7 @@ module.exports = (app) => {
         speaker,
         description,
         date,
+        registerUrl,
       });
 
       const result = await newEvent.save();
