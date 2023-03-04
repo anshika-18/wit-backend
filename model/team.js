@@ -20,6 +20,9 @@ const teamSchema = new Schema({
   status: {
     type: String,
   },
+  instagramUrl: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Team", teamSchema);
